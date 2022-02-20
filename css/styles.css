@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
 body {
   background-color: #c7f2ff;
   font-family: "Asap", sans-serif;
+  margin: 0;
 }
 h1 {
   font-family: "Indie Flower", cursive;
@@ -11,13 +16,41 @@ h3 {
   text-align: center;
 }
 
-.index-heading {
+a {
+  text-decoration: none;
+  color: black;
+}
+nav {
+  background-color: #267794;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #c7f2ff;
+  font-family: "Indie Flower", cursive;
+}
+
+nav h1 {
+  margin-top: 0;
+}
+
+.contact {
+  margin-left: 40px;
+}
+
+.header-img {
+  width: 50px;
+}
+
+.nav-heading {
   text-align: center;
   margin-bottom: 0;
   padding: 0px;
 }
 
-.index-subheading {
+.nav-subheading {
   text-align: center;
   font-size: 2rem;
   margin-top: -25px;
@@ -28,22 +61,13 @@ h3 {
 .cats-container {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-}
-
-.after {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  width: 85vw;
-  margin: 0 auto;
+  margin-top: 00px;
 }
 
 .loader {
   animation: rotation 2s infinite linear;
   width: 200px;
+  margin-top: 30px;
 }
 
 @keyframes rotation {
@@ -55,6 +79,18 @@ h3 {
   }
 }
 
+.after {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  width: 85vw;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 .cat-card {
   background-color: #61adc2;
 }
@@ -63,6 +99,7 @@ h3 {
   width: 100%;
   height: 300px;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .cat-name {
@@ -72,21 +109,93 @@ h3 {
 .cat-origin {
   text-align: left;
   margin-left: 20px;
+  margin-bottom: 20px;
 }
+
+/* --- Details ---*/
 
 .cat-info {
   display: flex;
   justify-content: space-around;
-  width: 50vw;
+  width: 70vw;
   margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.cat-info h1 {
+  margin-top: 0px;
 }
 
 .cat-description {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
+  background-color: #fff5e6;
+  padding: 20px;
+  border-radius: 40px;
 }
 
 .cat-ratings {
-  width: 40%;
+  background-color: #e0dad1;
+
+  padding: 20px;
+  border-radius: 40px;
+}
+
+.cat-ratings h2 {
+  font-size: 1rem;
+}
+
+.cat-ratings p {
+  font-size: 2.5rem;
+  margin-top: 0;
+  letter-spacing: 10px;
+}
+
+/* --- Contact --- */
+
+.contact-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  background-color: antiquewhite;
+  width: 50vw;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+
+.form-container h1 {
+  margin-top: 0;
+  font-size: 2.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.contact-form input {
+  height: 30px;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 10px;
+  display: none;
 }

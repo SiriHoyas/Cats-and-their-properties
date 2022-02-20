@@ -15,18 +15,33 @@ async function getSingleCat() {
   const cat = result[0];
   console.log(cat);
   catInfoContainer.innerHTML = "";
+  document.querySelector("title").innerHTML = cat.name;
   createHTML(cat);
+  checkAllergies(cat);
 }
 
 getSingleCat();
 
-function createHTML(result) {
-  document.querySelector(
-    ".cat-info"
-  ).innerHTML = `<div class="cat-description"><h1>${result.name}</h1>
-  <p>${result.description}</p>
-  <p>Temperament: ${result.temperament}</p></div>
-  <div class="cat-ratings"><h2>Dog friendly: ${result.dog_friendly}</h2>
-  <h2>Energy level: ${result.energy_level}</h2>
-  <h2>Hypoallergenic: ${result.hypoallergenic} </h2></div>`;
+function createHTML(cat) {
+  const catInfoContainer = document.querySelector(".cat-info");
+  const dogFriendlyEmoji = "🐶";
+  const energyLevelEmoji = "😼";
+
+  catInfoContainer.innerHTML = `<div class="cat-description"><h1>${cat.name}</h1>
+  <p>${cat.description}</p>
+  <p>Temperament: ${cat.temperament}</p></div>
+  <div class="cat-ratings"><h2>Dog friendly:</h2>
+  <p class="cat-ratings">${dogFriendlyEmoji.repeat(cat.dog_friendly)}</p>
+  <h2>Energy level:</h2>
+  <p class="cat-ratings">${energyLevelEmoji.repeat(cat.energy_level)}</p>
+  <h2>Hypoallergenic:</h2>
+  <p class="cat-ratings">${checkAllergies(cat)}</p></div>`;
+}
+
+function checkAllergies(details) {
+  if (details.hypoallergenic === 1) {
+    return "😺";
+  } else {
+    return "😾";
+  }
 }
