@@ -155,6 +155,16 @@ nav h1 {
 
 /* --- Contact --- */
 
+.success {
+  display: none;
+  text-align: center;
+  border: 1px solid green;
+  background-color: rgb(196, 255, 196);
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
 .contact-form div {
   display: flex;
   flex-direction: column;
