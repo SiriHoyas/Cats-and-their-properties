@@ -14,10 +14,12 @@ async function getCats() {
       try {
         createHTML(result[i]);
       } catch (error) {
-        console.log("Oh no! Cannot find image of a cat. Cannot make HTML for cat.");
+        //Jeg valgte å hoppe over resultater som manglet verdier i stedet for å lage html for en missing cat
+        console.log("Oh no! Cat-values are missing. Cannot make HTML for cat.");
       }
     }
   } catch (error) {
+    catsContainer.innerHTML = `<div class="cat-error">Who let the cat out?? Cannot fetch cats</div>`;
     console.log(error);
   }
 }

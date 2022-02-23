@@ -63,6 +63,16 @@ nav h1 {
   justify-content: center;
   margin-top: 00px;
 }
+.cat-error {
+  text-align: center;
+  border: 1px solid red;
+  background-color: rgb(255, 196, 196);
+  padding: 20px;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 2rem;
+}
 
 .loader {
   animation: rotation 2s infinite linear;

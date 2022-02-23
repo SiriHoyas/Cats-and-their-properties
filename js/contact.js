@@ -59,9 +59,7 @@ function checkLength(value, length) {
 }
 
 function validateEmail(email) {
-  const regEx = /^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+  const regEx = /^([a-z0-9_\.\+-]+)@([\da-z-]+)(\.[a-z]{2,6})+$/;
   const patternMatch = regEx.test(email);
   return patternMatch;
 }
-
-// /^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/

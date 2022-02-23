@@ -6,25 +6,25 @@ let url = "https://api.thecatapi.com/v1/breeds/search" + queryString;
 
 console.log(url);
 
-console.log(url);
-
 async function getSingleCat() {
-  const response = await fetch(url, { headers: { "x-api-key": "2adf32de-40c6-454a-856c-6b412348e384" } });
-  const result = await response.json();
-  const cat = result[0];
-  console.log(cat);
-  catInfoContainer.innerHTML = "";
-  document.querySelector("title").innerHTML = cat.name;
-  createHTML(cat);
-  checkAllergies(cat);
+  try {
+    const response = await fetch(url, { headers: { "x-api-key": "2adf32de-40c6-454a-856c-6b412348e384" } });
+    const result = await response.json();
+    const cat = result[0];
+    console.log(cat);
+    catInfoContainer.innerHTML = "";
+    document.querySelector("title").innerHTML = cat.name;
+    createHTML(cat);
+  } catch (error) {
+    catInfoContainer.innerHTML = `<div class="cat-error">Cat has gone incognito &#128576; Cannot fetch cat info.</div>`;
+  }
 }
 
 getSingleCat();
 
 function createHTML(cat) {
-  const catInfoContainer = document.querySelector(".cat-info");
-  const dogFriendlyEmoji = "&#128054";
-  const energyLevelEmoji = "&#128572";
+  const dogFriendlyEmoji = "&#128054"; // 🐶
+  const energyLevelEmoji = "&#128572"; // 😼
 
   catInfoContainer.innerHTML = `<div class="cat-description"><h1>${cat.name}</h1>
   <p>${cat.description}</p>
@@ -39,8 +39,8 @@ function createHTML(cat) {
 
 function checkAllergies(details) {
   if (details.hypoallergenic === 1) {
-    return "&#128570";
+    return "&#128570"; // 😺
   } else {
-    return "&#128574";
+    return "&#128574"; // 😾
   }
 }
