@@ -2,7 +2,6 @@ const catInfoContainer = document.querySelector(".cat-info");
 const queryString = document.location.search;
 console.log(queryString);
 
-const key = "2adf32de-40c6-454a-856c-6b412348e384";
 let url = "https://api.thecatapi.com/v1/breeds/search" + queryString;
 
 console.log(url);
@@ -10,7 +9,7 @@ console.log(url);
 console.log(url);
 
 async function getSingleCat() {
-  const response = await fetch(url);
+  const response = await fetch(url, { headers: { "x-api-key": "2adf32de-40c6-454a-856c-6b412348e384" } });
   const result = await response.json();
   const cat = result[0];
   console.log(cat);
@@ -24,8 +23,8 @@ getSingleCat();
 
 function createHTML(cat) {
   const catInfoContainer = document.querySelector(".cat-info");
-  const dogFriendlyEmoji = "🐶";
-  const energyLevelEmoji = "😼";
+  const dogFriendlyEmoji = "&#128054";
+  const energyLevelEmoji = "&#128572";
 
   catInfoContainer.innerHTML = `<div class="cat-description"><h1>${cat.name}</h1>
   <p>${cat.description}</p>
@@ -40,8 +39,8 @@ function createHTML(cat) {
 
 function checkAllergies(details) {
   if (details.hypoallergenic === 1) {
-    return "😺";
+    return "&#128570";
   } else {
-    return "😾";
+    return "&#128574";
   }
 }

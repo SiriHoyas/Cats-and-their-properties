@@ -3,6 +3,8 @@ const nameInput = document.querySelector("#name");
 const nameError = document.querySelector("#name-error");
 const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subject-error");
+const email = document.querySelector("#email");
+const emailError = document.querySelector("#email-error");
 const addressInput = document.querySelector("#address");
 const addressError = document.querySelector("#address-error");
 
@@ -13,34 +15,53 @@ function validateForm() {
   let emailPassed = false;
   let adressPassed = false;
 
-  if (nameInput.value.trim().length > 0) {
+  if (checkLength(nameInput.value, 0) === true) {
     nameError.style.display = "none";
     namePassed = true;
   } else {
     nameError.style.display = "revert";
   }
 
-  if (subject.value.length >= 10) {
+  if (checkLength(subject.value, 9) === true) {
     subjectError.style.display = "none";
     subjectPassed = true;
   } else {
     subjectError.style.display = "revert";
   }
 
-  //EMAIL VALIDATION
+  if (validateEmail(email.value) === true) {
+    emailError.style.display = "none";
+    emailPassed = true;
+  } else {
+    emailError.style.display = "revert";
+  }
 
-  if (addressInput.value.length >= 25) {
+  if (checkLength(addressInput.value, 24) === true) {
     addressError.style.display = "none";
     adressPassed = true;
   } else {
     addressError.style.display = "revert";
   }
 
-  if (namePassed && subjectPassed && adressPassed) {
+  if (namePassed && subjectPassed && emailPassed && adressPassed) {
     document.querySelector(".success").style.display = "revert";
   }
 }
 
 contactForm.addEventListener("submit", validateForm);
+
+function checkLength(value, length) {
+  if (value.trim().length > length) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function validateEmail(email) {
+  const regEx = /^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+  const patternMatch = regEx.test(email);
+  return patternMatch;
+}
 
 // /^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
