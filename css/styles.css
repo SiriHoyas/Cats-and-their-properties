@@ -27,6 +27,11 @@ nav {
   text-align: center;
 }
 
+span {
+  display: block;
+  font-size: 1.2rem;
+}
+
 nav a {
   color: #c7f2ff;
   font-family: "Indie Flower", cursive;
@@ -166,7 +171,6 @@ nav h1 {
 /* --- Contact --- */
 
 .success {
-  display: none;
   text-align: center;
   border: 1px solid green;
   background-color: rgb(196, 255, 196);

@@ -44,7 +44,7 @@ function validateForm() {
   }
 
   if (namePassed && subjectPassed && emailPassed && adressPassed) {
-    document.querySelector(".success").style.display = "revert";
+    document.querySelector(".success").innerHTML = `<p>Purrrrrfect! A kitty will be in touch with you soon.</p>`;
   }
 }
 
