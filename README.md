@@ -1,25 +1,21 @@
 # Your project title
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](/img/cats-screenshot.png)
 
-A simple overview of the use/purpose of the project.
+This project was my first big project using Javascript and APIs.
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
-
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
+Cats and their properties is an informational site about cat breeds. The site is built up with The Cat API.
+This project was an exercise in using APIs and its documentation in my Javascript Course Exam.
+For some fun I converted the cats ratings into emojis a dynamic way!
 
 ## Built With
 
 You can list a the tech stack that you've used over here
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+- [TheCatAPI](https://thecatapi.com)
+- Javascript
 
 ## Getting Started
 
@@ -39,32 +35,10 @@ git clone git@github.com:NoroffFEU/portfolio-1-example.git
 npm install
 ```
 
-### Running
-
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
-
-## Contributing
-
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
-
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+Feel free to contact me here:
 
-[My Twitter page](www.twitter.com)
+[My LinkedIn page](https://www.linkedin.com/in/siri-h%C3%B8y%C3%A5s-2bb74b1a2/)
 
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+[My Instagram](https://www.instagram.com/sirihoyas/)
