@@ -1,4 +1,4 @@
-# Your project title
+# Cats and their properties
 
 ![image](/img/cats-screenshot.png)
 
@@ -16,6 +16,14 @@ You can list a the tech stack that you've used over here
 
 - [TheCatAPI](https://thecatapi.com)
 - Javascript
+
+
+## Future Plans
+
+While this project works fine, I do have some idèas for changes I would like to make in the future. 
+
+[You can see the changelog here](https://github.com/SiriHoyas/Cats-and-their-properties/blob/main/CHANGELOG.md)
+
 
 ## Getting Started
 
