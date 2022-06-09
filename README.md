@@ -6,13 +6,11 @@ This project was my first big project using Javascript and APIs.
 
 ## Description
 
-Cats and their properties is an informational site about cat breeds. The site is built up with The Cat API.
-This project was an exercise in using APIs and its documentation in my Javascript Course Exam.
-For some fun I converted the cats ratings into emojis a dynamic way!
+_Cats and their properties_ is an informational site about cat breeds. The site content is fetched from The Cat API.
+This project was an exercise in using APIs and their documentation in my Javascript Course Exam.
+For some fun I dynamically converted the cats' ratings into emojis!
 
 ## Built With
-
-You can list a the tech stack that you've used over here
 
 - [TheCatAPI](https://thecatapi.com)
 - Javascript
@@ -20,7 +18,7 @@ You can list a the tech stack that you've used over here
 
 ## Future Plans
 
-While this project works fine, I do have some idèas for changes I would like to make in the future. 
+While this project works fine, I do have some ideas for changes I would like to make in the future. 
 
 [You can see the changelog here](https://github.com/SiriHoyas/Cats-and-their-properties/blob/main/CHANGELOG.md)
 
@@ -28,8 +26,6 @@ While this project works fine, I do have some idèas for changes I would like to
 ## Getting Started
 
 ### Installing
-
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
 
 1. Clone the repo:
 
