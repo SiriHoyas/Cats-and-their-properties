@@ -15,13 +15,11 @@ For some fun I dynamically converted the cats' ratings into emojis!
 - [TheCatAPI](https://thecatapi.com)
 - Javascript
 
-
 ## Future Plans
 
-While this project works fine, I do have some ideas for changes I would like to make in the future. 
+While this project works fine, I do have some ideas for changes I would like to make in the future.
 
-[You can see the changelog here](https://github.com/SiriHoyas/Cats-and-their-properties/blob/main/CHANGELOG.md)
-
+[You can see the planned improvements here](https://github.com/SiriHoyas/Cats-and-their-properties/blob/main/IMPROVEMENTS.md)
 
 ## Getting Started
 
